@@ -103,3 +103,4 @@ ENV/
 
 #large files
 w2vec/
+weights/

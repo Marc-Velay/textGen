@@ -20,7 +20,7 @@ Aragorn knelt beside him. Boromir opened his eyes and strove to speak. At last s
 
 'No!' said Aragorn, taking his hand and kissing his brow. 'You have conquered. Few have gained such a victory. Be at peace! Minas Tirith shall not fall!'
 
-Boromir smiled.
+Boromir smiled. unk
 
 'Which way did they go? Was Frodo there?' said Aragorn.
 
@@ -60,7 +60,7 @@ There were four goblin-soldiers of greater stature, swart, slant-eyed, with thic
 
 'I have not seen these tokens before,' said Aragorn. 'What do they mean?'
 
-'S is for Sauron,' said Gimli. 'That is easy to read.'
+'S is for Sauron,' said Gimli. 'That is easy to read.' unk
 
 'Nay!' said Legolas. 'Sauron does not use the Elf-runes.'
 
@@ -78,7 +78,7 @@ At the water-side Aragorn remained, watching the bier. while Legolas and Gimli h
 
 'There is a strange tale to tell!' said Legolas. 'There are only two boats upon the bank. We could find no trace of the other.'
 
-'Have Orcs been there?' asked Aragorn.
+'Have Orcs been there?' asked Aragorn. unk
 
 'We saw no signs of them,' answered Gimli. 'And Orcs would have taken or destroyed all the boats, and the baggage as well.'
 

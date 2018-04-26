@@ -8,44 +8,25 @@ from gensim.models import Phrases, Word2Vec
 from nltk.corpus import stopwords
 from nltk.stem.porter import PorterStemmer
 from nltk import sent_tokenize
-from gensim.models import KeyedVectors
 
 
-def split_sentences(text):
-    sents = sent_tokenize(text)
-    sentences = []
-    for sent in sents:
-        sentence = sent.lower().split()
-        filtered_sent = []
-        for word in sentence:
-            filtered_sent.append(re.sub('[^a-zA-Z0-9(-)]','', word))
-        sentences.append(filtered_sent)
-    return sentences
+from text_utils import *
 
 
-w2vfilename = 'w2vec/-------------------------------'
-model_filename = 'w2vec/model1'
+w2vfilename = 'w2vec/GoogleNews-vectors-negative300.bin'
+model_filename = 'w2vec/model9_100_occ2'
 #print('loading word2vec model')
 #trained_model = KeyedVectors.load_word2vec_format(w2vfilename, binary=True)
 # load ascii text and covert to lowercase
-filename = "texts/lotr.txt"
-filename2 = "texts/lotr2.txt"
-filename3 = "texts/lotr3.txt"
-r1 = open(filename).read()
-r2 = open(filename2).read()
-r3 = open(filename3).read()
-str_list = []
-str_list.append(r1)
-str_list.append(r2)
-str_list.append(r3)
-raw_text = ''.join(str_list)
+raw_text = load_raw()
+raw_text = raw_text + str(' unk')
 sentences = split_sentences(raw_text)
-model = Word2Vec(sentences, size=500, workers=7, window=5, min_count=1)
+model = Word2Vec(sentences, size=100, workers=7, window=8, min_count=4, sg=1)
 model.save(model_filename)
 print(len(list(model.wv.vocab)))
 
 
-print(model.most_similar(positive=['ring'], negative=[]))
+#print(model.most_similar(positive=['ring'], negative=[]))
 
 '''
 raw_text = raw_text.lower().split()
