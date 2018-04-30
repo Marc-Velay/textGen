@@ -85,7 +85,7 @@ new_len = X.shape[0]-(X.shape[0]%BATCH_SIZE)
 X = X[:new_len]
 y = y[:new_len]
 
-history = model.fit(X, y, epochs=200, batch_size=BATCH_SIZE, callbacks=callbacks_list)
+history = model.fit(X, y, epochs=500, batch_size=BATCH_SIZE, callbacks=callbacks_list)
 
 plt.figure(1)
 plt.plot(history.history['loss'])

@@ -57,7 +57,7 @@ print('creating lstm model')
 model, opt = get_lstm(X.shape, y.shape, BATCH_SIZE)
 
 # load the network weights
-filename = "weights/weights-improvement-200-0.0035.hdf5"
+filename = "weights-improvement-454-0.0001.hdf5"
 model.load_weights(filename)
 model.compile(loss='categorical_crossentropy', optimizer=opt)
 
@@ -69,7 +69,7 @@ print("\"", ' '.join([word_from_vec(value) for value in pattern]), "\"")
 print()
 
 # generate characters
-for i in range(50):
+for i in range(20):
 	x = np.reshape(np.array(pattern), (1, len(pattern), w2v_len))
 	#x = x / float(n_vocab)
 	prediction = model.predict(x, verbose=0, batch_size=1)

@@ -39,8 +39,8 @@ def load_raw():
     r3 = open(filename3).read()
     str_list = []
     str_list.append(r1)
-    #str_list.append(r2)
-    #str_list.append(r3)
+    str_list.append(r2)
+    str_list.append(r3)
     raw_text = ''.join(str_list)
     return raw_text
 
@@ -54,7 +54,7 @@ def load_filtered():
 
 def prep_data(cleaned_text, n_chars, n_vocab, model_w2v):
     # prepare the dataset of input to output pairs encoded as integers
-    seq_length = 20
+    seq_length = 10
     dataX = []
     dataY = []
     with tqdm(total=n_chars - seq_length) as pbar:
